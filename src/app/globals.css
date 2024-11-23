@@ -2,23 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: black;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("https://wallpapercave.com/wp/wp2116084.jpg");
+  background-color: black;
+  
 }
 h1{
   color: aqua;
@@ -32,11 +19,11 @@ h2{
 }
 button {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   background-color: red;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
   text-decoration: underline;
@@ -47,11 +34,35 @@ button {
   
 }
 label{
-  color:red;
+  color: red;
 }
-
 img{
   display: block;
   margin: 0 auto;
   max-width: 100%;
+}
+h3{
+  color:white;
+  text-align: center;
+  font-size: 35px;
+}
+@media (min-width: 785px){
+  .img{
+    width: 50%;
+    height: auto;
+  }
+  .footer{
+    color: cadetblue;
+    background-color: cadetblue;
+    width: 1800%;
+    height: 300px;
+    
+  }
+  
+
+}
+h6{
+  color: black;
+  font-size: 20px;
+  
 }
