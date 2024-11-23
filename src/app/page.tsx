@@ -53,9 +53,6 @@ hideCursorAfterText
 <Link href="https://www.linkedin.com/in/syeda-alisha-zehra-52868b1b0/"> <img  src="https://logospng.org/download/linkedin/logo-linkedin-icon-1536.png" width={"20%"}  /> <h3>My linkedin profile</h3> </Link>
 <Link href={"https://github.com/alishazehra/portfolio1.git"}><img src="https://th.bing.com/th/id/OIP.qdiXe0vKmri2QBmj_IM-dQHaBl?rs=1&pid=ImgDetMain" alt="" />  <h3>My github profile</h3></Link>
 <img src="https://wallpaperaccess.com/full/1567679.jpg" alt="" /> 
-<footer className='footer'><h6 > alishazehra866@gmail.com </h6> <br />
-<h6>03312322500</h6> <br />
-<h6  >@All rights reserved</h6> </footer>
 
 </div> 
       </div>
