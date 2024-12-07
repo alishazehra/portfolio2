@@ -1,74 +1,56 @@
 "use client"
 
-import React, { useState } from 'react';
-
-const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here (e.g., send to an API or display a success message)
-    console.log('Form Data:', formData);
-    alert('Thank you for your message!');
-  };
-
+export default function ContactPage() {
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            style={{ width: '100%', padding: '8px' }}
-            required
-          />
-
+    <div className="min-h-screen flex items-center justify-center bg-purple-10000 text-white">
+      <div className="w-full max-w-md p-6 bg-white-800 rounded-lg shadow-lg">
+        <h1 className="text-3xl font-bold mb-6 text-center">Contact Me</h1>
+        <form className="space-y-4">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium mb-1">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              className="w-full px-4 py-2 rounded bg-purple-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              placeholder="Your name"
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className="w-full px-4 py-2 rounded bg-purple-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              placeholder="Your email"
+            />
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium mb-1">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              className="w-full px-4 py-2 rounded bg-purple-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              placeholder="Your message"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded text-white font-bold transition duration-200"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
-        <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            style={{ width: '100%', padding: '8px' }}
-            required
-          />
-        </div>
-        <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"name="message"
-            value={formData.message}
-            onChange={handleChange}
-            style={{ width: '100%', padding: '8px' }}
-            rows={5}
-            required
-          ></textarea>
-        </div>
-        <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#0070f3', color: '#fff', border: 'none', cursor: 'pointer' }}>
-          Send Message
-        </button>
-      </form>
-    </div>
-  );
-};
-
-export default ContactPage;
-
-
-
+      </div>
+    );
+  }
+  
